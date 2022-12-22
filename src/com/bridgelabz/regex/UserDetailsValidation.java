@@ -1,7 +1,7 @@
 package com.bridgelabz.regex;
 /*
- * Problem Statement: UC4 As a User need to follow pre-defined Mobile Format 
- * - E.g. 91 9919819801 - Country code follow by space and 10 digit number
+ * ProblemStatement : UC 5 As a User need to follow pre-defined Password rules.
+Rule1 – minimum 8 Characters - NOTE – All rules must be passed
  */
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -55,6 +55,16 @@ public class UserDetailsValidation {
 	    	System.out.println("invalid");
 	    }
 	  }
+	
+	 public static void isValidPassword(String password) {
+		    regex = "^\\w{8,}$";			//\w \Any word character, short for [a-zA-Z_0-9]
+		    if (validate(regex, password)) {
+		    	System.out.println("valid");
+		    }
+		    else {
+		    	System.out.println("invalid");
+		    }
+		  }
 	
 	public static boolean validate(String regex, String pattern) {
 	    Pattern p = Pattern.compile(regex);

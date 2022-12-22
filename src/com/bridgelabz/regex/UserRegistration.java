@@ -1,7 +1,7 @@
 package com.bridgelabz.regex;
 /*
- * Problem Statement: UC4 As a User need to follow pre-defined Mobile Format 
- * - E.g. 91 9919819801 - Country code follow by space and 10 digit number
+ * ProblemStatement : UC 5 As a User need to follow pre-defined Password rules.
+   Rule1 – minimum 8 Characters - NOTE – All rules must be passed
  */
 import java.util.Scanner;
 
@@ -29,9 +29,14 @@ public class UserRegistration {
 	//method for check mobile number
 	public static void checkmobileNumber() {
 	    System.out.print("Enter a Mobile Number: ");
-	    scanner.nextLine();
 	    String mobileNumber = scanner.nextLine();
 	    UserDetailsValidation.isValidMobileNumber(mobileNumber);
+	  }
+		//method for check password
+	public static void checkPassword() {
+	    System.out.print("Enter password: ");
+	    String password = scanner.next();
+	    UserDetailsValidation.isValidPassword(password);
 	  }
 
 	/*
@@ -44,5 +49,6 @@ public class UserRegistration {
 		checkUserlastName();
 		checkEmail();
 		checkmobileNumber();
+		checkPassword();
 	}
 }
