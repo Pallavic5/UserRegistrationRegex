@@ -1,10 +1,7 @@
 package com.bridgelabz.regex;
-
 /*
- * Problem Statement :UC3 As a User need to enter a valid Email 
- * - E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts 
- * (abc, bl & co) and 2 optional (xyz & in) with precise @ and . positions
- * 
+ * Problem Statement: UC4 As a User need to follow pre-defined Mobile Format 
+ * - E.g. 91 9919819801 - Country code follow by space and 10 digit number
  */
 import java.util.Scanner;
 
@@ -17,20 +14,25 @@ public class UserRegistration {
 		String firstName = scanner.next();
 		UserDetailsValidation.isValidFirstName(firstName);
 	}
-
 	// method for check last name
 	public static void checkUserlastName() {
 		System.out.print("Enter a Last Name: ");
 		String lastName = scanner.next();
 		UserDetailsValidation.isValidLastName(lastName);
 	}
-
 	// method for check email
 	public static void checkEmail() {
 		System.out.print("Enter an email: ");
 		String email = scanner.next();
 		UserDetailsValidation.isValidEmail(email);
 	}
+	//method for check mobile number
+	public static void checkmobileNumber() {
+	    System.out.print("Enter a Mobile Number: ");
+	    scanner.nextLine();
+	    String mobileNumber = scanner.nextLine();
+	    UserDetailsValidation.isValidMobileNumber(mobileNumber);
+	  }
 
 	/*
 	 * main method
@@ -41,5 +43,6 @@ public class UserRegistration {
 		checkUserFirstName();
 		checkUserlastName();
 		checkEmail();
+		checkmobileNumber();
 	}
 }
