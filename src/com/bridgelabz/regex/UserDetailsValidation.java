@@ -1,6 +1,6 @@
 package com.bridgelabz.regex;
 /*
- * ProblemStatement : UC 7 Rule3– Should have at least 1 Numeric Number in password
+ * ProblemStatement : UC 8 Rule4- Has exactly one special character.
  * - NOTE – All rules must be passed
  */
 import java.util.regex.Matcher;
