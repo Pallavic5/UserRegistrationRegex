@@ -1,7 +1,7 @@
 package com.bridgelabz.regex;
 /*
- * ProblemStatement : UC 5 As a User need to follow pre-defined Password rules.
-   Rule1 – minimum 8 Characters - NOTE – All rules must be passed
+ * ProblemStatement : UC 6 Rule2– Should have at least 1 Upper Case 
+ * - NOTE – All rules must be passed
  */
 import java.util.Scanner;
 
@@ -29,6 +29,7 @@ public class UserRegistration {
 	//method for check mobile number
 	public static void checkmobileNumber() {
 	    System.out.print("Enter a Mobile Number: ");
+	    scanner.nextLine();
 	    String mobileNumber = scanner.nextLine();
 	    UserDetailsValidation.isValidMobileNumber(mobileNumber);
 	  }
